@@ -1,0 +1,655 @@
+{
+  "n_items": 32,
+  "backends": {
+    "llm": "mock",
+    "judge": "mock",
+    "embedder": "hash",
+    "agent_model": "claude-sonnet-4-5",
+    "judge_model": "claude-opus-4-1"
+  },
+  "metrics": {
+    "task_success_rate": 0.875,
+    "grounding_rate": 1.0,
+    "hallucination_rate": 0.125,
+    "confidence_appropriate_rate": 0.875,
+    "retrieval_hit_rate": 0.906,
+    "overconfident_count": 4
+  },
+  "calibration": {
+    "high": {
+      "n": 29,
+      "accuracy": 0.862
+    },
+    "medium": {
+      "n": 0,
+      "accuracy": null
+    },
+    "low": {
+      "n": 3,
+      "accuracy": 1.0
+    }
+  },
+  "by_variant_type": {
+    "missense": {
+      "n": 22,
+      "success": 22,
+      "success_rate": 1.0
+    },
+    "nonsense": {
+      "n": 3,
+      "success": 3,
+      "success_rate": 1.0
+    },
+    "indel": {
+      "n": 3,
+      "success": 3,
+      "success_rate": 1.0
+    },
+    "splicing": {
+      "n": 4,
+      "success": 0,
+      "success_rate": 0.0
+    }
+  },
+  "by_mechanism": {
+    "stability": {
+      "n": 6,
+      "success": 6,
+      "success_rate": 1.0
+    },
+    "binding-site": {
+      "n": 8,
+      "success": 8,
+      "success_rate": 1.0
+    },
+    "post-translational-modification site": {
+      "n": 9,
+      "success": 9,
+      "success_rate": 1.0
+    },
+    "other": {
+      "n": 5,
+      "success": 5,
+      "success_rate": 1.0
+    },
+    "splicing": {
+      "n": 4,
+      "success": 0,
+      "success_rate": 0.0
+    }
+  },
+  "records": [
+    {
+      "id": "tp53-r175h",
+      "question": "What does the missense variant R175H in TP53 do to protein stability?",
+      "variant_type": "missense",
+      "mechanism": "stability",
+      "task_success": true,
+      "grounding_rate": 1.0,
+      "hallucination_rate": 0.0,
+      "confidence": "high",
+      "confidence_appropriate": true,
+      "insufficient_evidence": false,
+      "retrieval_hit": true,
+      "cited_chunk_ids": [
+        "TP53:P04637:161-200",
+        "TP53:P04637:summary"
+      ],
+      "rationale": "kw_match=3/3; claims=2 grounded=2 hallucinated=0; confidence=high (ok)."
+    },
+    {
+      "id": "tp53-c176s",
+      "question": "How does the C176S substitution in TP53 affect zinc binding?",
+      "variant_type": "missense",
+      "mechanism": "binding-site",
+      "task_success": true,
+      "grounding_rate": 1.0,
+      "hallucination_rate": 0.0,
+      "confidence": "high",
+      "confidence_appropriate": true,
+      "insufficient_evidence": false,
+      "retrieval_hit": true,
+      "cited_chunk_ids": [
+        "TP53:P04637:161-200",
+        "TP53:P04637:summary"
+      ],
+      "rationale": "kw_match=3/3; claims=2 grounded=2 hallucinated=0; confidence=high (ok)."
+    },
+    {
+      "id": "tp53-r248q",
+      "question": "What is the effect of R248Q in TP53 on DNA contact?",
+      "variant_type": "missense",
+      "mechanism": "binding-site",
+      "task_success": true,
+      "grounding_rate": 1.0,
+      "hallucination_rate": 0.0,
+      "confidence": "high",
+      "confidence_appropriate": true,
+      "insufficient_evidence": false,
+      "retrieval_hit": true,
+      "cited_chunk_ids": [
+        "TP53:P04637:241-280",
+        "TP53:P04637:summary"
+      ],
+      "rationale": "kw_match=2/2; claims=2 grounded=2 hallucinated=0; confidence=high (ok)."
+    },
+    {
+      "id": "tp53-r273h",
+      "question": "Does R273H in TP53 disrupt the protein core or a binding surface?",
+      "variant_type": "missense",
+      "mechanism": "binding-site",
+      "task_success": true,
+      "grounding_rate": 1.0,
+      "hallucination_rate": 0.0,
+      "confidence": "high",
+      "confidence_appropriate": true,
+      "insufficient_evidence": false,
+      "retrieval_hit": true,
+      "cited_chunk_ids": [
+        "TP53:P04637:241-280",
+        "TP53:P04637:summary"
+      ],
+      "rationale": "kw_match=2/2; claims=2 grounded=2 hallucinated=0; confidence=high (ok)."
+    },
+    {
+      "id": "tp53-s15a",
+      "question": "What happens if TP53 residue S15 is mutated (S15A)?",
+      "variant_type": "missense",
+      "mechanism": "post-translational-modification site",
+      "task_success": true,
+      "grounding_rate": 1.0,
+      "hallucination_rate": 0.0,
+      "confidence": "high",
+      "confidence_appropriate": true,
+      "insufficient_evidence": false,
+      "retrieval_hit": true,
+      "cited_chunk_ids": [
+        "TP53:P04637:1-40",
+        "TP53:P04637:summary"
+      ],
+      "rationale": "kw_match=2/2; claims=2 grounded=2 hallucinated=0; confidence=high (ok)."
+    },
+    {
+      "id": "tp53-k120r",
+      "question": "What modification site is lost in the TP53 K120R variant?",
+      "variant_type": "missense",
+      "mechanism": "post-translational-modification site",
+      "task_success": true,
+      "grounding_rate": 1.0,
+      "hallucination_rate": 0.0,
+      "confidence": "high",
+      "confidence_appropriate": true,
+      "insufficient_evidence": false,
+      "retrieval_hit": true,
+      "cited_chunk_ids": [
+        "TP53:P04637:81-120",
+        "TP53:P04637:summary"
+      ],
+      "rationale": "kw_match=2/2; claims=2 grounded=2 hallucinated=0; confidence=high (ok)."
+    },
+    {
+      "id": "pten-c124s",
+      "question": "How does C124S affect the catalytic activity of PTEN?",
+      "variant_type": "missense",
+      "mechanism": "binding-site",
+      "task_success": true,
+      "grounding_rate": 1.0,
+      "hallucination_rate": 0.0,
+      "confidence": "high",
+      "confidence_appropriate": true,
+      "insufficient_evidence": false,
+      "retrieval_hit": true,
+      "cited_chunk_ids": [
+        "PTEN:P60484:14-185",
+        "PTEN:P60484:summary"
+      ],
+      "rationale": "kw_match=3/3; claims=2 grounded=2 hallucinated=0; confidence=high (ok)."
+    },
+    {
+      "id": "pten-y68f",
+      "question": "What is the consequence of the PTEN Y68F variant?",
+      "variant_type": "missense",
+      "mechanism": "post-translational-modification site",
+      "task_success": true,
+      "grounding_rate": 1.0,
+      "hallucination_rate": 0.0,
+      "confidence": "high",
+      "confidence_appropriate": true,
+      "insufficient_evidence": false,
+      "retrieval_hit": true,
+      "cited_chunk_ids": [
+        "PTEN:P60484:14-185",
+        "PTEN:P60484:summary"
+      ],
+      "rationale": "kw_match=2/2; claims=2 grounded=2 hallucinated=0; confidence=high (ok)."
+    },
+    {
+      "id": "cftr-w401g",
+      "question": "Does the CFTR W401G variant affect a binding site?",
+      "variant_type": "missense",
+      "mechanism": "binding-site",
+      "task_success": true,
+      "grounding_rate": 1.0,
+      "hallucination_rate": 0.0,
+      "confidence": "high",
+      "confidence_appropriate": true,
+      "insufficient_evidence": false,
+      "retrieval_hit": true,
+      "cited_chunk_ids": [
+        "CFTR:P13569:366-405",
+        "CFTR:P13569:summary"
+      ],
+      "rationale": "kw_match=2/2; claims=2 grounded=2 hallucinated=0; confidence=high (ok)."
+    },
+    {
+      "id": "cftr-s45a",
+      "question": "What does mutating the CFTR phosphorylation site S45 do?",
+      "variant_type": "missense",
+      "mechanism": "post-translational-modification site",
+      "task_success": true,
+      "grounding_rate": 1.0,
+      "hallucination_rate": 0.0,
+      "confidence": "high",
+      "confidence_appropriate": true,
+      "insufficient_evidence": false,
+      "retrieval_hit": true,
+      "cited_chunk_ids": [
+        "CFTR:P13569:1444-1480",
+        "CFTR:P13569:41-80",
+        "CFTR:P13569:807-846"
+      ],
+      "rationale": "kw_match=1/2; claims=3 grounded=3 hallucinated=0; confidence=high (ok)."
+    },
+    {
+      "id": "ldlr-c27y",
+      "question": "How does the LDLR C27Y variant affect protein stability?",
+      "variant_type": "missense",
+      "mechanism": "stability",
+      "task_success": true,
+      "grounding_rate": 1.0,
+      "hallucination_rate": 0.0,
+      "confidence": "high",
+      "confidence_appropriate": true,
+      "insufficient_evidence": false,
+      "retrieval_hit": true,
+      "cited_chunk_ids": [
+        "LDLR:P01130:25-65",
+        "LDLR:P01130:summary"
+      ],
+      "rationale": "kw_match=2/2; claims=2 grounded=2 hallucinated=0; confidence=high (ok)."
+    },
+    {
+      "id": "serping1-c123r",
+      "question": "What does C123R do to SERPING1 (C1 inhibitor) stability?",
+      "variant_type": "missense",
+      "mechanism": "stability",
+      "task_success": true,
+      "grounding_rate": 1.0,
+      "hallucination_rate": 0.0,
+      "confidence": "high",
+      "confidence_appropriate": true,
+      "insufficient_evidence": false,
+      "retrieval_hit": true,
+      "cited_chunk_ids": [
+        "PTEN:P60484:14-185",
+        "SERPING1:P05155:121-160"
+      ],
+      "rationale": "kw_match=2/2; claims=2 grounded=2 hallucinated=0; confidence=high (ok)."
+    },
+    {
+      "id": "umod-c32y",
+      "question": "How does the UMOD C32Y variant affect the EGF-like domain?",
+      "variant_type": "missense",
+      "mechanism": "stability",
+      "task_success": true,
+      "grounding_rate": 1.0,
+      "hallucination_rate": 0.0,
+      "confidence": "high",
+      "confidence_appropriate": true,
+      "insufficient_evidence": false,
+      "retrieval_hit": true,
+      "cited_chunk_ids": [
+        "UMOD:P07911:28-64",
+        "UMOD:P07911:summary"
+      ],
+      "rationale": "kw_match=3/3; claims=2 grounded=2 hallucinated=0; confidence=high (ok)."
+    },
+    {
+      "id": "kcnq1-s27a",
+      "question": "What is the effect of the KCNQ1 S27A variant?",
+      "variant_type": "missense",
+      "mechanism": "post-translational-modification site",
+      "task_success": true,
+      "grounding_rate": 1.0,
+      "hallucination_rate": 0.0,
+      "confidence": "high",
+      "confidence_appropriate": true,
+      "insufficient_evidence": false,
+      "retrieval_hit": true,
+      "cited_chunk_ids": [
+        "KCNQ1:P51787:1-40",
+        "KCNQ1:P51787:summary"
+      ],
+      "rationale": "kw_match=2/2; claims=2 grounded=2 hallucinated=0; confidence=high (ok)."
+    },
+    {
+      "id": "vhl-s68a",
+      "question": "What does the VHL S68A variant change?",
+      "variant_type": "missense",
+      "mechanism": "post-translational-modification site",
+      "task_success": true,
+      "grounding_rate": 1.0,
+      "hallucination_rate": 0.0,
+      "confidence": "high",
+      "confidence_appropriate": true,
+      "insufficient_evidence": false,
+      "retrieval_hit": true,
+      "cited_chunk_ids": [
+        "VHL:P40337:41-80",
+        "VHL:P40337:summary"
+      ],
+      "rationale": "kw_match=2/2; claims=2 grounded=2 hallucinated=0; confidence=high (ok)."
+    },
+    {
+      "id": "brca1-s114a",
+      "question": "What modification does BRCA1 S114A remove?",
+      "variant_type": "missense",
+      "mechanism": "post-translational-modification site",
+      "task_success": true,
+      "grounding_rate": 1.0,
+      "hallucination_rate": 0.0,
+      "confidence": "high",
+      "confidence_appropriate": true,
+      "insufficient_evidence": false,
+      "retrieval_hit": true,
+      "cited_chunk_ids": [
+        "BRCA1:P38398:81-120",
+        "BRCA1:P38398:summary"
+      ],
+      "rationale": "kw_match=2/2; claims=2 grounded=2 hallucinated=0; confidence=high (ok)."
+    },
+    {
+      "id": "brca1-k56r",
+      "question": "What site is affected by the BRCA1 K56R variant?",
+      "variant_type": "missense",
+      "mechanism": "post-translational-modification site",
+      "task_success": true,
+      "grounding_rate": 1.0,
+      "hallucination_rate": 0.0,
+      "confidence": "high",
+      "confidence_appropriate": true,
+      "insufficient_evidence": false,
+      "retrieval_hit": true,
+      "cited_chunk_ids": [
+        "BRCA1:P38398:41-80",
+        "BRCA1:P38398:summary"
+      ],
+      "rationale": "kw_match=2/2; claims=2 grounded=2 hallucinated=0; confidence=high (ok)."
+    },
+    {
+      "id": "muc1-y1191f",
+      "question": "What does the MUC1 Y1191F variant do?",
+      "variant_type": "missense",
+      "mechanism": "post-translational-modification site",
+      "task_success": true,
+      "grounding_rate": 1.0,
+      "hallucination_rate": 0.0,
+      "confidence": "high",
+      "confidence_appropriate": true,
+      "insufficient_evidence": false,
+      "retrieval_hit": true,
+      "cited_chunk_ids": [
+        "MUC1:P15941:1189-1228",
+        "MUC1:P15941:summary"
+      ],
+      "rationale": "kw_match=2/2; claims=2 grounded=2 hallucinated=0; confidence=high (ok)."
+    },
+    {
+      "id": "kcnq1-q244r",
+      "question": "Does KCNQ1 Q244R affect a lipid binding site?",
+      "variant_type": "missense",
+      "mechanism": "binding-site",
+      "task_success": true,
+      "grounding_rate": 1.0,
+      "hallucination_rate": 0.0,
+      "confidence": "high",
+      "confidence_appropriate": true,
+      "insufficient_evidence": false,
+      "retrieval_hit": true,
+      "cited_chunk_ids": [
+        "KCNQ1:P51787:241-280",
+        "KCNQ1:P51787:summary"
+      ],
+      "rationale": "kw_match=2/2; claims=2 grounded=2 hallucinated=0; confidence=high (ok)."
+    },
+    {
+      "id": "tp53-r213x",
+      "question": "What is the predicted effect of the nonsense variant R213X in TP53?",
+      "variant_type": "nonsense",
+      "mechanism": "other",
+      "task_success": true,
+      "grounding_rate": 1.0,
+      "hallucination_rate": 0.0,
+      "confidence": "high",
+      "confidence_appropriate": true,
+      "insufficient_evidence": false,
+      "retrieval_hit": true,
+      "cited_chunk_ids": [
+        "TP53:P04637:201-240",
+        "TP53:P04637:summary"
+      ],
+      "rationale": "kw_match=2/2; claims=2 grounded=2 hallucinated=0; confidence=high (ok)."
+    },
+    {
+      "id": "cftr-g542x",
+      "question": "What does the CFTR nonsense variant G542X affect?",
+      "variant_type": "nonsense",
+      "mechanism": "other",
+      "task_success": true,
+      "grounding_rate": 1.0,
+      "hallucination_rate": 0.0,
+      "confidence": "high",
+      "confidence_appropriate": true,
+      "insufficient_evidence": false,
+      "retrieval_hit": true,
+      "cited_chunk_ids": [
+        "CFTR:P13569:423-646",
+        "CFTR:P13569:summary"
+      ],
+      "rationale": "kw_match=2/2; claims=2 grounded=2 hallucinated=0; confidence=high (ok)."
+    },
+    {
+      "id": "pten-r130x",
+      "question": "What is the consequence of the PTEN nonsense variant R130X?",
+      "variant_type": "nonsense",
+      "mechanism": "other",
+      "task_success": true,
+      "grounding_rate": 1.0,
+      "hallucination_rate": 0.0,
+      "confidence": "high",
+      "confidence_appropriate": true,
+      "insufficient_evidence": false,
+      "retrieval_hit": true,
+      "cited_chunk_ids": [
+        "PTEN:P60484:14-185",
+        "PTEN:P60484:summary"
+      ],
+      "rationale": "kw_match=2/2; claims=2 grounded=2 hallucinated=0; confidence=high (ok)."
+    },
+    {
+      "id": "cftr-f508del",
+      "question": "How does the F508del deletion affect CFTR folding and stability?",
+      "variant_type": "indel",
+      "mechanism": "stability",
+      "task_success": true,
+      "grounding_rate": 1.0,
+      "hallucination_rate": 0.0,
+      "confidence": "high",
+      "confidence_appropriate": true,
+      "insufficient_evidence": false,
+      "retrieval_hit": true,
+      "cited_chunk_ids": [
+        "CFTR:P13569:423-646",
+        "CFTR:P13569:summary"
+      ],
+      "rationale": "kw_match=3/3; claims=2 grounded=2 hallucinated=0; confidence=high (ok)."
+    },
+    {
+      "id": "ldlr-c27del",
+      "question": "What would an in-frame deletion of LDLR C27 (C27del) do?",
+      "variant_type": "indel",
+      "mechanism": "stability",
+      "task_success": true,
+      "grounding_rate": 1.0,
+      "hallucination_rate": 0.0,
+      "confidence": "high",
+      "confidence_appropriate": true,
+      "insufficient_evidence": false,
+      "retrieval_hit": true,
+      "cited_chunk_ids": [
+        "LDLR:P01130:25-65",
+        "LDLR:P01130:summary"
+      ],
+      "rationale": "kw_match=2/2; claims=2 grounded=2 hallucinated=0; confidence=high (ok)."
+    },
+    {
+      "id": "tp53-c176del",
+      "question": "What is the effect of an in-frame deletion of TP53 C176 (C176del)?",
+      "variant_type": "indel",
+      "mechanism": "binding-site",
+      "task_success": true,
+      "grounding_rate": 1.0,
+      "hallucination_rate": 0.0,
+      "confidence": "high",
+      "confidence_appropriate": true,
+      "insufficient_evidence": false,
+      "retrieval_hit": true,
+      "cited_chunk_ids": [
+        "TP53:P04637:161-200",
+        "TP53:P04637:summary"
+      ],
+      "rationale": "kw_match=3/3; claims=2 grounded=2 hallucinated=0; confidence=high (ok)."
+    },
+    {
+      "id": "cftr-splice-1521",
+      "question": "Does the CFTR c.1521_1523delCTT variant disrupt mRNA splicing?",
+      "variant_type": "splicing",
+      "mechanism": "splicing",
+      "task_success": false,
+      "grounding_rate": 1.0,
+      "hallucination_rate": 1.0,
+      "confidence": "high",
+      "confidence_appropriate": false,
+      "insufficient_evidence": false,
+      "retrieval_hit": true,
+      "cited_chunk_ids": [
+        "CFTR:P13569:1196-1209",
+        "CFTR:P13569:847-858",
+        "CFTR:P13569:summary"
+      ],
+      "rationale": "kw_match=n/a; claims=3 grounded=3 hallucinated=0; confidence=high (miscalibrated)."
+    },
+    {
+      "id": "brca1-splice-5074",
+      "question": "Is the BRCA1 c.5074+1G>A variant pathogenic via a splicing mechanism?",
+      "variant_type": "splicing",
+      "mechanism": "splicing",
+      "task_success": false,
+      "grounding_rate": 1.0,
+      "hallucination_rate": 1.0,
+      "confidence": "high",
+      "confidence_appropriate": false,
+      "insufficient_evidence": false,
+      "retrieval_hit": true,
+      "cited_chunk_ids": [
+        "BRCA1:P38398:1401-1440",
+        "BRCA1:P38398:1737-1755",
+        "BRCA1:P38398:summary"
+      ],
+      "rationale": "kw_match=n/a; claims=3 grounded=3 hallucinated=0; confidence=high (miscalibrated)."
+    },
+    {
+      "id": "tp53-splice-intron",
+      "question": "Does a TP53 intron 4 splice-donor variant affect splicing?",
+      "variant_type": "splicing",
+      "mechanism": "splicing",
+      "task_success": false,
+      "grounding_rate": 1.0,
+      "hallucination_rate": 1.0,
+      "confidence": "high",
+      "confidence_appropriate": false,
+      "insufficient_evidence": false,
+      "retrieval_hit": true,
+      "cited_chunk_ids": [
+        "TP53:P04637:201-240",
+        "TP53:P04637:241-280",
+        "TP53:P04637:41-80"
+      ],
+      "rationale": "kw_match=n/a; claims=3 grounded=3 hallucinated=0; confidence=high (miscalibrated)."
+    },
+    {
+      "id": "kcnq1-splice-syn",
+      "question": "Will a synonymous variant at the last nucleotide of a KCNQ1 exon disrupt splicing?",
+      "variant_type": "splicing",
+      "mechanism": "splicing",
+      "task_success": false,
+      "grounding_rate": 1.0,
+      "hallucination_rate": 1.0,
+      "confidence": "high",
+      "confidence_appropriate": false,
+      "insufficient_evidence": false,
+      "retrieval_hit": true,
+      "cited_chunk_ids": [
+        "KCNQ1:P51787:1-40",
+        "KCNQ1:P51787:481-520",
+        "KCNQ1:P51787:601-640"
+      ],
+      "rationale": "kw_match=n/a; claims=3 grounded=3 hallucinated=0; confidence=high (miscalibrated)."
+    },
+    {
+      "id": "egfr-t790m-oos",
+      "question": "What does the EGFR T790M variant do to drug binding?",
+      "variant_type": "missense",
+      "mechanism": "other",
+      "task_success": true,
+      "grounding_rate": 1.0,
+      "hallucination_rate": 0.0,
+      "confidence": "low",
+      "confidence_appropriate": true,
+      "insufficient_evidence": true,
+      "retrieval_hit": false,
+      "cited_chunk_ids": [],
+      "rationale": "kw_match=n/a; claims=0 grounded=0 hallucinated=0; confidence=low (ok)."
+    },
+    {
+      "id": "kras-g12d-oos",
+      "question": "How does the KRAS G12D variant affect GTP binding?",
+      "variant_type": "missense",
+      "mechanism": "binding-site",
+      "task_success": true,
+      "grounding_rate": 1.0,
+      "hallucination_rate": 0.0,
+      "confidence": "low",
+      "confidence_appropriate": true,
+      "insufficient_evidence": true,
+      "retrieval_hit": false,
+      "cited_chunk_ids": [],
+      "rationale": "kw_match=n/a; claims=0 grounded=0 hallucinated=0; confidence=low (ok)."
+    },
+    {
+      "id": "ret-m918t-oos",
+      "question": "What is the effect of the RET M918T variant?",
+      "variant_type": "missense",
+      "mechanism": "other",
+      "task_success": true,
+      "grounding_rate": 1.0,
+      "hallucination_rate": 0.0,
+      "confidence": "low",
+      "confidence_appropriate": true,
+      "insufficient_evidence": true,
+      "retrieval_hit": false,
+      "cited_chunk_ids": [],
+      "rationale": "kw_match=n/a; claims=0 grounded=0 hallucinated=0; confidence=low (ok)."
+    }
+  ]
+}

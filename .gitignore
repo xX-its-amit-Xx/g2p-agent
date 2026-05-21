@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+build/
+dist/
+
+# Environments
+.venv/
+.env
+
+# g2p-agent generated data (regenerable via `g2p-agent ingest`)
+data/raw/
+data/chroma/
+
+# Keep the shipped baseline report + benchmark; ignore ad-hoc eval runs
+eval/results/latest.*
+eval/results/*_live.*
+
+# Notebooks
+.ipynb_checkpoints/
